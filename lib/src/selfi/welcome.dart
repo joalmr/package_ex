@@ -11,14 +11,14 @@ import 'package:package_ejemplo/src/components/button_secondary.dart';
 import 'package:package_ejemplo/src/selfi/take_picture.dart';
 import 'package:package_ejemplo/src/style/styles.dart';
 
-class WelcomeView extends StatefulWidget {
-  const WelcomeView({Key? key}) : super(key: key);
+class WelcomePkg extends StatefulWidget {
+  const WelcomePkg({Key? key}) : super(key: key);
 
   @override
-  State<WelcomeView> createState() => _WelcomeViewState();
+  State<WelcomePkg> createState() => _WelcomePkgState();
 }
 
-class _WelcomeViewState extends State<WelcomeView> {
+class _WelcomePkgState extends State<WelcomePkg> {
   bool btnActive = false;
   bool accepted = false;
 
@@ -263,8 +263,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            TakePictureView()),
+                                        builder: (context) => TakePicturePkg()),
                                   );
                                 },
                               ),

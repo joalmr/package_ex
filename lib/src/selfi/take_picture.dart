@@ -6,14 +6,14 @@ import 'package:package_ejemplo/src/components/button_primary.dart';
 import 'package:package_ejemplo/src/components/button_secondary.dart';
 import 'package:package_ejemplo/src/style/styles.dart';
 
-class TakePictureView extends StatefulWidget {
-  const TakePictureView({Key? key}) : super(key: key);
+class TakePicturePkg extends StatefulWidget {
+  const TakePicturePkg({Key? key}) : super(key: key);
 
   @override
-  State<TakePictureView> createState() => _TakePictureViewState();
+  State<TakePicturePkg> createState() => _TakePicturePkgState();
 }
 
-class _TakePictureViewState extends State<TakePictureView> {
+class _TakePicturePkgState extends State<TakePicturePkg> {
   seleccionarLogo() async {
     await _procesarLogo(ImageSource.camera);
   }
@@ -33,7 +33,6 @@ class _TakePictureViewState extends State<TakePictureView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
       body: SafeArea(
         child: Container(
           width: double.maxFinite,
