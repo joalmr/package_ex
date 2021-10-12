@@ -8,12 +8,12 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  bloc: ^7.2.1
+  # bloc: ^7.2.1
   easy_rich_text: ^0.5.7
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.3.0
-  http: ^0.13.4
+  # flutter_bloc: ^7.3.0
+  # http: ^0.13.4
   image_picker: ^0.8.4+2
 
 dev_dependencies:
