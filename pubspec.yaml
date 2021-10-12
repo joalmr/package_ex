@@ -1,7 +1,7 @@
 name: package_ejemplo
 description: A new Flutter package project.
 version: 0.0.1
-homepage: /lib/selfi/welcome.dart
+homepage: https://github.com/joalmr/package_ex
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
