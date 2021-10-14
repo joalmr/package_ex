@@ -16,4 +16,8 @@ class WelcomeCubit extends Cubit<WelcomeState> {
   void accepted() {
     emit(WelcomeAccepted());
   }
+
+  void gotoPicture() {
+    emit(WelcomeGoTo());
+  }
 }

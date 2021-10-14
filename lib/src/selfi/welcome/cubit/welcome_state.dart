@@ -12,3 +12,5 @@ class WelcomeBtnPulse extends WelcomeState {
 }
 
 class WelcomeAccepted extends WelcomeState {}
+
+class WelcomeGoTo extends WelcomeState {}

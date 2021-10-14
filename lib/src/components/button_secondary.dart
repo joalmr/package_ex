@@ -1,8 +1,8 @@
-import 'package:package_ejemplo/src/style/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:package_ejemplo/src/style/styles.dart';
 
 Widget buttonSecondary(
-    {required Function() onPressed, required text, Size? minimumSize}) {
+    {required Function()? onPressed, required text, Size? minimumSize}) {
   return TextButton(
     onPressed: onPressed,
     style: TextButton.styleFrom(
