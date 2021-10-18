@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:package_ejemplo/src/style/styles.dart';
+import 'package:package_ejemplo/src/theme/colors.dart';
 
 class ButtonPrimary extends StatelessWidget {
   final Function()? onPressed;

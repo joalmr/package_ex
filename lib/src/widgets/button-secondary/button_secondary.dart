@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:package_ejemplo/src/style/styles.dart';
+import 'package:package_ejemplo/src/theme/colors.dart';
 
 Widget buttonSecondary(
     {required Function()? onPressed, required text, Size? minimumSize}) {
