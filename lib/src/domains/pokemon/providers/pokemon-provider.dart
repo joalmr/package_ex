@@ -1,5 +1,5 @@
-import 'package:package_ejemplo/src/domains/pokemon/models/pokemon-model.dart';
+import 'package:http/http.dart';
 
 abstract class PokemonProvider {
-  Future<PokemonModel> getPokemons();
+  Future<Response> getPokemons();
 }

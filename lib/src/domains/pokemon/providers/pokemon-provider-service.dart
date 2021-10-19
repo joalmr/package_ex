@@ -1,4 +1,4 @@
-import 'package:package_ejemplo/src/domains/pokemon/models/pokemon-model.dart';
+import 'package:http/http.dart';
 import 'package:package_ejemplo/src/domains/pokemon/providers/pokemon-provider.dart';
 import 'package:package_ejemplo/src/libs/provider/api-provider.dart';
 
@@ -7,5 +7,5 @@ class PokemonProviderService extends PokemonProvider {
   PokemonProviderService(this.api);
 
   @override
-  Future<PokemonModel> getPokemons() => api.get("pokeapi.co", "api/v2/type/1");
+  Future<Response> getPokemons() => api.get("pokeapi.co", "api/v2/type/1");
 }

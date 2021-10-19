@@ -1,8 +1,9 @@
+import 'package:http/http.dart';
 import 'package:package_ejemplo/src/domains/pokemon/models/pokemon-model.dart';
 
 class PokemonMapping {
-  PokemonModel toResponse(response) {
-    return pokemonModelFromJson(response.data);
+  PokemonModel fromJsontoPokemon(Response response) {
+    return pokemonModelFromJson(response.body);
   }
 
   toError(error) {

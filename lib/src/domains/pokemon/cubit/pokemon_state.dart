@@ -6,7 +6,7 @@ abstract class PokemonState {}
 class PokemonInitial extends PokemonState {}
 
 class PokemonData extends PokemonState {
-  final PokemonModel pokemons;
+  final PokemonModel pokemon;
 
-  PokemonData(this.pokemons);
+  PokemonData(this.pokemon);
 }
