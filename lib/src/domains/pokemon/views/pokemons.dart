@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:package_ejemplo/src/domains/pokemon/cubit/pokemon_cubit.dart';
-import 'package:package_ejemplo/src/domains/pokemon/providers/pokemon-provider-service.dart';
-import 'package:package_ejemplo/src/domains/pokemon/repositories/pokemon-mapping.dart';
-import 'package:package_ejemplo/src/domains/pokemon/repositories/pokemon-repository.dart';
-import 'package:package_ejemplo/src/libs/provider/api-provider.dart';
 
 class PokemonView extends StatelessWidget {
   const PokemonView();
@@ -15,18 +11,12 @@ class PokemonView extends StatelessWidget {
       appBar: AppBar(),
       body: SafeArea(
         child: BlocProvider(
-          create: (context) => PokemonCubit(
-            PokemonRepository(
-              PokemonProviderService(ApiProvider()),
-              PokemonMapping(),
-            ),
-          )..getPokemons(),
-          child: BlocConsumer<PokemonCubit, PokemonState>(
-            listener: (context, state) {},
+          create: (context) => PokemonCubit()..getPokemons(),
+          child: BlocBuilder<PokemonCubit, PokemonState>(
             builder: (context, state) {
               switch (state.runtimeType) {
                 case PokemonInitial:
-                  return Container(color: Colors.red);
+                  return Container(color: Colors.green);
                 case PokemonData:
                   return Container(color: Colors.blue);
                 default:
