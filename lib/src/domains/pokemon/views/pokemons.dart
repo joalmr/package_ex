@@ -7,15 +7,17 @@ import 'package:package_ejemplo/src/libs/dependency-injection/module-container.d
 
 class PokemonView extends StatelessWidget {
   final injector = ModuleContainer().initialize(Injector());
-
-  PokemonView();
+  final String token;
+  PokemonView({required this.token});
 
   @override
   Widget build(BuildContext context) {
     final pokemonRepository = injector.get<PokemonRepository>();
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(token),
+      ),
       body: SafeArea(
         child: BlocProvider(
           create: (context) => PokemonCubit(pokemonRepository)..getPokemons(),
@@ -28,8 +30,13 @@ class PokemonView extends StatelessWidget {
                   return Container(
                       color: Colors.blue,
                       child: Center(
-                          child:
-                              Text((state as PokemonData).pokemon.name ?? '')));
+                          child: Text((state as PokemonData)
+                                  .pokemon
+                                  .pokemon!
+                                  .first
+                                  .pokemon!
+                                  .name ??
+                              '')));
                 default:
                   return Container(color: Colors.white);
               }
