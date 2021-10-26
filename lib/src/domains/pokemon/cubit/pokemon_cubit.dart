@@ -13,7 +13,7 @@ class PokemonCubit extends Cubit<PokemonState> {
 
   getPokemons() async {
     final dato = await pokemonRepository.getPokemons();
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 3), () {
       emit(PokemonData(dato));
     });
   }
