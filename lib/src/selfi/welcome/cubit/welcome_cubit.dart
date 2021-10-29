@@ -8,6 +8,14 @@ class WelcomeCubit extends Cubit<WelcomeState> {
 
   bool btnActive = false;
 
+  void validateInit(String token) {
+    if (token == "tokenBlabla2") {
+      emit(WelcomeValidateInitial());
+    } else {
+      emit(WelcomeInvalidInitial());
+    }
+  }
+
   void btnPulse(bool active) {
     btnActive = active;
     emit(WelcomeBtnPulse(active));

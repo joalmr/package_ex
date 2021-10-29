@@ -305,10 +305,17 @@ class WelcomePkg extends StatelessWidget {
             listener: (context, state) {
               print(state);
               if (state is WelcomeGoTo) {
+                print(state);
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => TakePicturePkg()),
                 );
               }
+              // if (state is WelcomeInvalidInitial) {
+              //   print(state);
+              //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              //     content: Text("Sending Message"),
+              //   ));
+              // }
             },
             builder: (context, state) {
               switch (state.runtimeType) {
